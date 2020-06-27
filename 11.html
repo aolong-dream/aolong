@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../jquery-3.5.0.js"></script>
+</head>
+
+<body>
+  <div>sfsfsfsfs</div>
+    <button>使用ajax发起数据请求</button>
+    <script>
+        $(function () {
+           $('button').on('click',function(){
+              $.ajax({
+                url: 'http://www.liulongbin.top:3006/api/jsonp?shizhi="游戏"&&age="未知"&&dizhi="山东" ',
+                dataType:'JSONP',
+                jsonpCallback:'aolong',
+                success:function(res){
+                    console.log(res)
+                }
+              })
+           })
+        });
+
+    </script>
+</body>
+
+</html>
